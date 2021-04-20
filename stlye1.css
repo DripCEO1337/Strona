@@ -1,0 +1,62 @@
+body{
+	background-color: white;
+	text-align: center;
+}
+
+h1{
+	text-align: center;
+	font-size: 55px;
+}
+
+h2{
+ font-size: 40px;
+}
+#wszystko{
+	background-color: white;
+	width: 100%;
+	height:1020px;
+}
+
+#wiosna{
+	background-color: lightgreen;
+	margin: 10px;
+	float: left;
+	width: 610px;
+	height:990px;
+}
+
+#lato{
+	background-color: #FFFF66;
+	margin: 10px;
+	float: left;
+	width: 610px;
+	height:990px;
+}
+
+#jesień{
+	background-color: orange;
+	margin: 10px;
+	float: left;
+	width: 610px;
+	height:990px;
+}
+
+#zima{
+	background-color: lightblue;
+	margin: 10px;
+	float: left;
+	width: 610px;
+	height:990px;
+}
+
+.podpisy{
+	font-family: arial;
+	font-size: 25px;
+	
+}
+
+.pasek{
+	height: 20px;
+	width: 100%;
+	background-color: white;
+}
