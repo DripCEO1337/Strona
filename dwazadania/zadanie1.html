@@ -1,0 +1,106 @@
+<html lang="pl">
+
+
+<head>
+	<meta charset="utf-8">
+	
+	<style>
+	body
+	{
+	background-color: lightpink;
+	font-size:24px;
+	color:white;
+	}
+	
+	</style>
+	
+	
+	
+	<script type="text/javascript">
+		function sprawdz()
+		{
+		var liczba = document.getElementById("pole").value;
+	
+		if(liczba>0) document.getElementById("wynik").innerHTML="dodatnia";
+		else if (liczba<0) document.getElementById("wynik").innerHTML="ujemna";
+		else if (liczba=="0") document.getElementById("wynik").innerHTML="zero";
+		else document.getElementById("wynik").innerHTML="to nie jest liczba";
+		}
+		
+		function wypisz()
+		{
+		var liczba1 = document.getElementById("pole1").value;
+		var liczba2 = document.getElementById("pole2").value;
+		var napis = "";
+		
+			if(isNaN(liczba1) && isNaN(liczba2))
+			{
+			document.getElementById("wynik2").innerHTML ="nie podano liczb";
+			}
+			else if(isNaN(liczba1) && (liczba2))
+			{
+			document.getElementById("wynik2").innerHTML ="w pierwszym polu nie podano liczby";
+			}
+			else if((liczba1) && isNaN(liczba2))
+			{
+			document.getElementById("wynik2").innerHTML ="w drugim polu nie podano liczby";
+			}
+			
+			else if(liczba1==liczba2)
+			{
+			document.getElementById("wynik2").innerHTML ="podano dwie takie same lizcby";
+			}
+			else if(liczba1<liczba2)
+			{				
+				for(i=liczba1; i<=liczba2; i++)
+				{
+				napis = napis+i+" ";
+				}
+				document.getElementById("wynik2").innerHTML = napis;
+			}
+			else if(liczba1>liczba2)
+			{				
+				for(i=liczba1; i>=liczba2; i--)
+				{
+				napis = napis+i+" ";
+				}
+				document.getElementById("wynik2").innerHTML = napis;
+			}
+		}
+		
+		
+		
+	
+	</script>
+
+
+
+</head>
+
+
+
+
+
+<body onload="zmienslajd()">
+
+	<h2>ZADANIE 1</h2>
+	
+	<input type="text" id="pole"/>
+	<input type="submit" value="SPRAWDŹ" onclick="sprawdz()"/>
+	<div id="wynik"></div>
+	
+	
+	<h2>ZADANIE 2</h2>
+	
+	<input type="text" id="pole1"/>
+	<input type="text" id="pole2"/>
+	<input type="submit" value="POKAŻ" onclick="wypisz()" />
+	<div id="wynik2"></div>
+	
+	
+	
+	
+	
+</body>
+
+</html>
